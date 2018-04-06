@@ -1,6 +1,7 @@
 /************************************
 **************  BASIC  **************
 ************************************/
+
 html {
     color: #4a4a4a;
     font-size: 16px;
@@ -96,6 +97,42 @@ nav span {
     padding-left: 16px;
 }
 
+nav span a {
+    text-decoration: none;
+    color: #4a4a4a;
+
+}
+
+.small {
+    display: none;
+}
+
+@media only screen and (max-width: 900px) {
+    header {
+        justify-content: center;
+    }
+
+    .big {
+        display: none;
+    }
+    .small {
+        display: flex;
+        width: 100%;
+        justify-content: space-around;
+        align-content: center;
+    }
+
+    .small span {
+        display: flex;
+        align-self: center;
+    }
+
+    .small img {
+        height: 32px;
+        /*        background: blue;*/
+    }
+}
+
 /************************************
 **********  HERO SECTION  ***********
 ************************************/
@@ -115,12 +152,62 @@ nav span {
 .hero_image img {
     width: 100%;
 }
+
 .callforaction {
     width: 40%;
 }
 
 .callforaction h4 {
     width: 420px;
+}
+
+@media only screen and (max-width: 1110px) {
+    .hero {
+        flex-direction: column;
+        align-items: center;
+    }
+    .hero_image {
+        width: 100%;
+        height: 100%;
+        margin: 32px 24px;
+    }
+    .callforaction {
+        width: 100%;
+    }
+    .hero_image img {
+        width: 100%;
+    }
+    .callforaction h4 {
+        width: 100%;
+    }
+    h2 {
+        width: calc(100% - 32px);
+        padding: 0 16px 32px 16px;
+    }
+
+    .callforaction h4 {
+        width: calc(100% - 32px);
+        padding: 0 16px 24px 16px;
+    }
+
+
+    button {
+        width: calc(100% - 32px);
+        padding: 8px 0;
+        margin: 0 16px 32px 16px;
+        background-color: #4a4a4a;
+        border: none;
+
+    }
+    button a {
+        text-decoration: none;
+        color: white;
+        width: 100%;
+        height: 100%;
+    }
+    button:hover {
+        background-color: #9b9b9b;
+    }
 }
 
 /************************************
@@ -134,7 +221,8 @@ nav span {
 
 .practice {
     width: 60%;
-    margin: 32px 24px 0px 24px;
+    padding: 32px 24px 0px 24px;
+    border-right: 2px solid #d8d8d8;
 }
 
 .practice img {
@@ -146,13 +234,12 @@ nav span {
     flex-direction: column;
     width: 40%;
     height: 100%;
-    border-left: 2px solid #d8d8d8;
+
 }
 
 .item {
     display: flex;
     flex-direction: row;
-    
 }
 
 .item:first-child {
@@ -174,6 +261,10 @@ nav span {
     padding-top: 32px;
 }
 
+.img_small {
+    display: none;
+}
+
 .text {
     width: 65%;
     display: flex;
@@ -189,6 +280,77 @@ nav span {
 .text p {
     padding: 8px 0;
     line-height: 1.5em;
+}
+
+.text a {
+    text-decoration: none;
+    font-weight: bold;
+}
+
+@media only screen and (max-width: 1110px) {
+    .img_big,
+    .practice_big {
+        display: none;
+    }
+
+    .side {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 100%;
+        border-left: 0;
+        padding: 16px 16px 32px 16px;
+    }
+
+    .item {
+        display: flex;
+        flex-direction: column;
+        padding-bottom: 64px;
+
+    }
+
+    .item:first-child {
+        border-bottom: 0;
+    }
+
+    .item img {
+        width: 100%;
+        height: 100%;
+        padding: 0px;
+    }
+
+    .item:first-child img {
+        padding-top: 0px;
+    }
+
+    .img_small {
+        display: flex;
+        padding: 0;
+    }
+
+
+    .item.highlight {
+        background-color: white;
+        margin-bottom: 0;
+        padding-bottom: 0;
+    }
+
+    .text {
+        width: 93%;
+
+    }
+
+    .text {
+        padding-top: 32px;
+        padding-left: 16px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .text p {
+        width: 100%;
+    }
+
 }
 
 /************************************
@@ -222,7 +384,9 @@ nav span {
 }
 
 .courses img {
-    width: 100%;
+    display: flex;
+    max-width: 100%;
+    flex-shrink: 1;
     height: 100%;
 }
 
@@ -244,15 +408,65 @@ nav span {
 .category {
     padding: 8px 0;
     line-height: 0;
-    
-    
 }
 
 @media only screen and (max-width: 1900px) {
     .container {
         justify-content: space-around;
     }
+
 }
+
+
+@media only screen and (max-width: 1110px) {
+    .courses img {
+        display: none;
+    }
+
+    .courses_text .big {
+        display: none;
+    }
+
+    .courses_text h4 {
+        width: calc(100%-32px);
+        padding: 16px 16px 24px 16px;
+        background-color: #eaebec;
+        font-weight: bold;
+        margin: 0;
+    }
+
+    .courses {
+        padding: 0;
+        margin: 0;
+        width: 100%;
+        max-width: 100%;
+
+    }
+
+    .courses_text {
+        padding: 0 16px;
+        margin-bottom: 8px;
+    }
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        padding: 0;
+        margin: 0;
+        width: 100%;
+    }
+
+    .learning {
+        background-color: white;
+        padding: 32px 0;
+        width: 100%;
+    }
+}
+
+
+
+
 /************************************
 ********  THESIS SECTION  *********
 ************************************/
@@ -281,6 +495,14 @@ video {
     width: 100%;
 }
 
+.video h4 {
+    padding: 24px 0 8px 0;
+}
+
+.video p {
+    line-height: 1.5em;
+}
+
 .thesis_side {
     display: flex;
     flex-direction: column;
@@ -302,8 +524,8 @@ video {
     padding: 16px;
 }
 
-.item:first-child img {
-    padding-top: 32px;
+.thesis_item:first-child img {
+    padding-top: 16px;
 }
 
 .thesis_text {
@@ -323,6 +545,25 @@ video {
     line-height: 1.5em;
 }
 
+@media only screen and (max-width: 1110px) {
+    .thesis_side.big {
+        display: none;
+    }
+
+    .thesis h3 {
+        padding: 32px 0 16px 0;
+    }
+
+    .video {
+        width: 100%;
+        margin: 0px 0px 24px 0px;
+    }
+
+    .video .big {
+        display: none;
+    }
+}
+
 /************************************
 *********  FOOTER SECTION  **********
 ************************************/
@@ -337,4 +578,19 @@ footer {
 
 .legal span {
     padding-left: 16px;
+}
+
+@media only screen and (max-width: 1110px) {
+    footer {
+        border-top: 0;
+
+        justify-content: flex-start;
+        padding: 16px 16px;
+        height: auto;
+    }
+
+    .legal span {
+        display: none;
+    }
+
 }
